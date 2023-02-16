@@ -75,12 +75,15 @@ const Projects = () => {
                     </p>
                     <div className="flex flex-row align-bottom space-x-4">
                       <Link href={project.github} target="_blank">
-                        <BsGithub size={30} className="hover:-translate-y-1  transition-transform cursor-pointer" />
+                        <BsGithub
+                          size={30}
+                          className="hover:-translate-y-1  transition-transform cursor-pointer  hover:text-teal-600 ease-out"
+                        />
                       </Link>
                       <Link href={project.link} target="_blank">
                         <BsArrowUpRightSquare
                           size={30}
-                          className="hover:-translate-y-1 transition-transform cursor-pointer"
+                          className="hover:-translate-y-1 transition-transform cursor-pointer  hover:text-teal-600 ease-out"
                         />
                       </Link>
                     </div>

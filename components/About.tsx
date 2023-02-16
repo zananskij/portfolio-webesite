@@ -64,7 +64,10 @@ const About = () => {
             <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
               {skills.map((item, idx) => {
                 return (
-                  <p key={idx} className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold">
+                  <p
+                    key={idx}
+                    className="bg-gray-200 hover:bg-teal-600 hover:text-white px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold"
+                  >
                     {item.skill}
                   </p>
                 )
