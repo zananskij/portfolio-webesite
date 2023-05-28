@@ -4,7 +4,7 @@ import { Link } from "react-scroll/modules"
 import { HiArrowDown } from "react-icons/hi"
 
 const skills = [
-  { skill: "JavaScript" },
+  { skill: "JavaScriptt" },
   { skill: "React" },
   { skill: "TypeScript" },
   { skill: "Next.js" },
