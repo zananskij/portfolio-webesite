@@ -4,30 +4,86 @@ import Link from "next/link"
 import SlideUp from "./SlideUp"
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
 
+interface LinkWithLabelProps {
+  href: string
+  IconComponent: React.ElementType
+  label: string
+  className: string
+}
+
+const LinkWithLabel: React.FC<LinkWithLabelProps> = ({ href, IconComponent, label, className }) => {
+  return (
+    <Link href={href} target="_blank">
+      <div className={`flex items-center space-x-2 ${className}`}>
+        <IconComponent
+          size={30}
+          className="hover:-translate-y-1  transition-transform cursor-pointer  hover:text-teal-600 ease-out"
+        />
+        <p className="text-sm text-gray-600 hover:text-teal-600">{label}</p>
+      </div>
+    </Link>
+  )
+}
+
 const projects = [
   {
-    name: "Streaming backlist",
-    skillsUsed: ["TypeScript", "React", "Express", "SQL", "Tailwind CSS"],
-    description: "Browse from thousands of Movies & TV shows and add them to a Watchlater or Favorites list!",
-    image: "/letterboxd.png",
-    github: "https://github.com/zananskij/Letterboxd-clone-frontend",
-    link: "https://letterboxd-clone.herokuapp.com/",
-  },
-  {
-    name: "Chat App",
-    skillsUsed: ["React", "Python", "Django", "PostgreSQL", "Bootstrap"],
-    description: "Sign-up and be able to add and start chatting with friends!",
+    name: "Chatter",
+    skillsUsed: [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT Auth",
+      "bcrypt",
+      "WebSockets",
+      "Tailwind CSS",
+    ],
+    description:
+      "An interactive, real-time chat application built with the MERN stack, featuring WebSockets for immediate messaging, secure user authentication using JWT and bcrypt for password hashing, all fully responsive and styled with Tailwind CSS.",
     image: "/chatApp.png",
-    github: "https://github.com/zananskij/chat-app-frontend",
+    githubFrontend: "https://github.com/zananskij/chatter-client",
+    githubBackend: "https://github.com/zananskij/chatter-api",
     link: "https://slack-clone-ga.herokuapp.com/",
   },
   {
-    name: "Travel Blog",
-    skillsUsed: ["React", "Express", "Node.js", "MongoDB", "Bootstrap & CSS"],
-    description: "Make posts about places you've been!",
+    name: "Simple Ecommerce",
+    skillsUsed: [
+      "JavaScript",
+      "React",
+      "Stripe Integration",
+      "Secure Payment",
+      "Express",
+      "Axios",
+      "CSS",
+      "Mobile Friendly",
+    ],
+    description:
+      "An intuitive e-commerce application featuring an interactive shopping cart and secure checkout via Stripe integration. Built with JavaScript, React, and Express, it utilizes Axios for efficient data handling. The mobile-friendly design is crafted with CSS, ensuring a user-friendly shopping experience.",
     image: "/travelblog.png",
-    github: "https://github.com/zananskij/project3-frontend-new",
+    githubFrontend: "https://github.com/zananskij/simple-ecommerce",
+    githubBackend: "https://github.com/zananskij/simple-ecommerce-server",
     link: "https://twitter-clone-frontend123.herokuapp.com/",
+  },
+  {
+    name: "Streaming backlist",
+    skillsUsed: ["TypeScript", "React", "Express", "PostgreSQL", "Node.js", "Axios", "Tailwind CSS", "Responsive"],
+    description:
+      "Explore a vast library of movies and TV shows, powered by the TMDB API. Discover trending titles or search for specific ones, each with detailed information including release dates, user ratings, and overviews. Users can curate a Favorites list to catalog titles they've enjoyed, or plan ahead with a Watchlater list for future viewing. Fully responsive and optimized, this application delivers an exceptional browsing experience on devices of all sizes.",
+    image: "/letterboxd.png",
+    githubFrontend: "https://github.com/zananskij/Letterboxd-clone-frontend",
+    githubBackend: "https://github.com/zananskij/Letterboxd-clone-backend",
+    link: "https://letterboxd-clone.herokuapp.com/",
+  },
+  {
+    name: "My Portfolio",
+    skillsUsed: ["TypeScript", "React", "Next.js", "Tailwind CSS", "Responsive"],
+    description:
+      "My personal portfolio, built with Next.js, highlights my design-focused approach to web development and my proficiency in creating interactive, responsive UI/UX. Demonstrating my ability to pick up and learn a new technology, while also leveraging my skills in TypeScript and React, it serves as an example to my continuous growth and future-focused mindset.",
+    image: "/letterboxd.png",
+    githubFrontend: "https://github.com/zananskij/portfolio-website",
+    githubBackend: "https://github.com/zananskij/Letterboxd-clone-backend",
+    link: "https://letterboxd-clone.herokuapp.com/",
   },
 ]
 
@@ -73,19 +129,25 @@ const Projects = () => {
                     <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
                       {project.description}
                     </p>
-                    <div className="flex flex-row align-bottom space-x-4">
-                      <Link href={project.github} target="_blank">
-                        <BsGithub
-                          size={30}
-                          className="hover:-translate-y-1  transition-transform cursor-pointer  hover:text-teal-600 ease-out"
-                        />
-                      </Link>
-                      <Link href={project.link} target="_blank">
-                        <BsArrowUpRightSquare
-                          size={30}
-                          className="hover:-translate-y-1 transition-transform cursor-pointer  hover:text-teal-600 ease-out"
-                        />
-                      </Link>
+                    <div className="flex flex-row align-bottom space-x-4 mt-5">
+                      <LinkWithLabel
+                        href={project.githubFrontend}
+                        IconComponent={BsGithub}
+                        label="Frontend Repo"
+                        className="hover:-translate-y-1 transition-transform cursor-pointer"
+                      />
+                      <LinkWithLabel
+                        href={project.githubBackend}
+                        IconComponent={BsGithub}
+                        label="Backend Repo"
+                        className="hover:-translate-y-1 transition-transform cursor-pointer"
+                      />
+                      <LinkWithLabel
+                        href={project.link}
+                        IconComponent={BsArrowUpRightSquare}
+                        label="Live Project"
+                        className="hover:-translate-y-1 transition-transform cursor-pointer"
+                      />
                     </div>
                   </div>
                 </div>

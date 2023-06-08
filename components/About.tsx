@@ -4,18 +4,16 @@ import { Link } from "react-scroll/modules"
 import { HiArrowDown } from "react-icons/hi"
 
 const skills = [
-  { skill: "JavaScriptt" },
+  { skill: "JavaScript" },
   { skill: "React" },
   { skill: "TypeScript" },
   { skill: "Next.js" },
   { skill: "Node.js" },
   { skill: "Express" },
-  { skill: "Python" },
-  { skill: "Django" },
-  { skill: "Tailwind CSS" },
-  { skill: "Bootstrap" },
   { skill: "MongoDB" },
   { skill: "PostgreSQL" },
+  { skill: "Tailwind CSS" },
+  { skill: "Bootstrap" },
   { skill: "Git" },
   { skill: "GitHub" },
 ]
