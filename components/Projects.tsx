@@ -44,7 +44,7 @@ const projects = [
     image: "/chatApp.png",
     githubFrontend: "https://github.com/zananskij/chatter-client",
     githubBackend: "https://github.com/zananskij/chatter-api",
-    link: "https://slack-clone-ga.herokuapp.com/",
+    link: "https://chatter-messenger.herokuapp.com/",
   },
   {
     name: "Simple Ecommerce",
@@ -63,7 +63,7 @@ const projects = [
     image: "/travelblog.png",
     githubFrontend: "https://github.com/zananskij/simple-ecommerce",
     githubBackend: "https://github.com/zananskij/simple-ecommerce-server",
-    link: "https://twitter-clone-frontend123.herokuapp.com/",
+    link: "https://simple-ecommerce.herokuapp.com/",
   },
   {
     name: "Streaming backlist",
@@ -83,7 +83,7 @@ const projects = [
     image: "/letterboxd.png",
     githubFrontend: "https://github.com/zananskij/portfolio-website",
     githubBackend: "https://github.com/zananskij/Letterboxd-clone-backend",
-    link: "https://letterboxd-clone.herokuapp.com/",
+    link: "https://jonzananski.herokuapp.com/",
   },
 ]
 
