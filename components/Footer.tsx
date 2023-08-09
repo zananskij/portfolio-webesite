@@ -32,7 +32,7 @@ const Footer = () => {
 
         <div className="flex flex-row items-center justify-center space-x-2 md:justify-end">
           <a
-            href="https://docs.google.com/document/d/1DlSpxZhtqAq9vCRq0saCtojFLiiHunR9s_Fd_h3VGfk/edit#"
+            href="https://docs.google.com/document/d/1yD2v-Ug2fBdFioKZMUzCc708B-JzR6vDHAzGbN-pv84/edit"
             rel="noreferrer"
             target="_blank"
             className="flex flex-row items-center hover:text-teal-600 hover:-translate-y-1 transition-transform ease-out"
